@@ -1,6 +1,6 @@
-diff -ruN gcc-4.9.1/gcc/configure gcc-4.9.1-kos/gcc/configure
---- gcc-4.9.1/gcc/configure	2014-05-28 18:37:50.000000000 +0700
-+++ gcc-4.9.1-kos/gcc/configure	2014-08-20 15:10:14.050807771 +0700
+diff -ruN gcc-4.9.2/gcc/configure gcc-4.9.2-kos/gcc/configure
+--- gcc-4.9.2/gcc/configure	2014-05-28 18:37:50.000000000 +0700
++++ gcc-4.9.2-kos/gcc/configure	2014-08-20 15:10:14.050807771 +0700
 @@ -11196,7 +11196,7 @@
      target_thread_file='single'
      ;;
@@ -10,9 +10,9 @@ diff -ruN gcc-4.9.1/gcc/configure gcc-4.9.1-kos/gcc/configure
      target_thread_file=${enable_threads}
      ;;
    *)
-diff -ruN gcc-4.9.1/libgcc/config/sh/crt1.S gcc-4.9.1-kos/libgcc/config/sh/crt1.S
---- gcc-4.9.1/libgcc/config/sh/crt1.S	2014-01-03 05:25:22.000000000 +0700
-+++ gcc-4.9.1-kos/libgcc/config/sh/crt1.S	2013-11-27 10:26:57.572168000 +0700
+diff -ruN gcc-4.9.2/libgcc/config/sh/crt1.S gcc-4.9.2-kos/libgcc/config/sh/crt1.S
+--- gcc-4.9.2/libgcc/config/sh/crt1.S	2014-01-03 05:25:22.000000000 +0700
++++ gcc-4.9.2-kos/libgcc/config/sh/crt1.S	2013-11-27 10:26:57.572168000 +0700
 @@ -1,1368 +1,202 @@
 -/* Copyright (C) 2000-2014 Free Software Foundation, Inc.
 -   This file was pretty much copied from newlib.
@@ -1565,9 +1565,9 @@ diff -ruN gcc-4.9.1/libgcc/config/sh/crt1.S gcc-4.9.1-kos/libgcc/config/sh/crt1.
 -	.ualong	0x0
 -#endif /* VBR_SETUP */
 -#endif /* ! __SH5__ */
-diff -ruN gcc-4.9.1/libgcc/config/sh/fake-kos.S gcc-4.9.1-kos/libgcc/config/sh/fake-kos.S
---- gcc-4.9.1/libgcc/config/sh/fake-kos.S	1970-01-01 07:00:00.000000000 +0700
-+++ gcc-4.9.1-kos/libgcc/config/sh/fake-kos.S	2013-11-27 10:26:57.572168000 +0700
+diff -ruN gcc-4.9.2/libgcc/config/sh/fake-kos.S gcc-4.9.2-kos/libgcc/config/sh/fake-kos.S
+--- gcc-4.9.2/libgcc/config/sh/fake-kos.S	1970-01-01 07:00:00.000000000 +0700
++++ gcc-4.9.2-kos/libgcc/config/sh/fake-kos.S	2013-11-27 10:26:57.572168000 +0700
 @@ -0,0 +1,75 @@
 +! Weakly linked symbols used to get GCC to hopefully compile itself properly.
 +! These will be replaced by the real symbols in actual compiled programs.
@@ -1645,9 +1645,9 @@ diff -ruN gcc-4.9.1/libgcc/config/sh/fake-kos.S gcc-4.9.1-kos/libgcc/config/sh/f
 +    mov     #-1, r0
 +    
 \ В конце файла нет новой строки
-diff -ruN gcc-4.9.1/libgcc/config/sh/gthr-kos.h gcc-4.9.1-kos/libgcc/config/sh/gthr-kos.h
---- gcc-4.9.1/libgcc/config/sh/gthr-kos.h	1970-01-01 07:00:00.000000000 +0700
-+++ gcc-4.9.1-kos/libgcc/config/sh/gthr-kos.h	2013-11-27 10:26:57.612168000 +0700
+diff -ruN gcc-4.9.2/libgcc/config/sh/gthr-kos.h gcc-4.9.2-kos/libgcc/config/sh/gthr-kos.h
+--- gcc-4.9.2/libgcc/config/sh/gthr-kos.h	1970-01-01 07:00:00.000000000 +0700
++++ gcc-4.9.2-kos/libgcc/config/sh/gthr-kos.h	2013-11-27 10:26:57.612168000 +0700
 @@ -0,0 +1,355 @@
 +/* Copyright (C) 2009, 2010, 2011, 2012 Lawrence Sebald */
 +
@@ -2004,9 +2004,9 @@ diff -ruN gcc-4.9.1/libgcc/config/sh/gthr-kos.h gcc-4.9.1-kos/libgcc/config/sh/g
 +#endif /* _LIBOBJC */
 +
 +#endif /* ! GCC_GTHR_KOS_H */
-diff -ruN gcc-4.9.1/libgcc/config/sh/t-sh gcc-4.9.1-kos/libgcc/config/sh/t-sh
---- gcc-4.9.1/libgcc/config/sh/t-sh	2014-01-03 05:25:22.000000000 +0700
-+++ gcc-4.9.1-kos/libgcc/config/sh/t-sh	2014-08-20 15:13:32.603778000 +0700
+diff -ruN gcc-4.9.2/libgcc/config/sh/t-sh gcc-4.9.2-kos/libgcc/config/sh/t-sh
+--- gcc-4.9.2/libgcc/config/sh/t-sh	2014-01-03 05:25:22.000000000 +0700
++++ gcc-4.9.2-kos/libgcc/config/sh/t-sh	2014-08-20 15:13:32.603778000 +0700
 @@ -23,6 +23,8 @@
    $(LIB1ASMFUNCS_CACHE)
  LIB1ASMFUNCS_CACHE = _ic_invalidate _ic_invalidate_array
@@ -2016,9 +2016,9 @@ diff -ruN gcc-4.9.1/libgcc/config/sh/t-sh gcc-4.9.1-kos/libgcc/config/sh/t-sh
  crt1.o: $(srcdir)/config/sh/crt1.S
  	$(gcc_compile) -c $<
  
-diff -ruN gcc-4.9.1/libgcc/configure gcc-4.9.1-kos/libgcc/configure
---- gcc-4.9.1/libgcc/configure	2014-02-07 14:46:34.000000000 +0700
-+++ gcc-4.9.1-kos/libgcc/configure	2014-08-20 15:14:48.312148000 +0700
+diff -ruN gcc-4.9.2/libgcc/configure gcc-4.9.2-kos/libgcc/configure
+--- gcc-4.9.2/libgcc/configure	2014-02-07 14:46:34.000000000 +0700
++++ gcc-4.9.2-kos/libgcc/configure	2014-08-20 15:14:48.312148000 +0700
 @@ -4571,6 +4571,7 @@
      tpf)	thread_header=config/s390/gthr-tpf.h ;;
      vxworks)	thread_header=config/gthr-vxworks.h ;;
@@ -2027,9 +2027,9 @@ diff -ruN gcc-4.9.1/libgcc/configure gcc-4.9.1-kos/libgcc/configure
  esac
  
  
-diff -ruN gcc-4.9.1/libstdc++-v3/configure gcc-4.9.1-kos/libstdc++-v3/configure
---- gcc-4.9.1/libstdc++-v3/configure	2014-03-21 01:57:07.000000000 +0700
-+++ gcc-4.9.1-kos/libstdc++-v3/configure	2014-08-20 15:15:44.752424000 +0700
+diff -ruN gcc-4.9.2/libstdc++-v3/configure gcc-4.9.2-kos/libstdc++-v3/configure
+--- gcc-4.9.2/libstdc++-v3/configure	2014-03-21 01:57:07.000000000 +0700
++++ gcc-4.9.2-kos/libstdc++-v3/configure	2014-08-20 15:15:44.752424000 +0700
 @@ -15193,6 +15193,7 @@
      tpf)	thread_header=config/s390/gthr-tpf.h ;;
      vxworks)	thread_header=config/gthr-vxworks.h ;;
